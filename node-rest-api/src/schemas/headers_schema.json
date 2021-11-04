@@ -1,0 +1,9 @@
+{
+    "title": "Headers Schema",
+    "type": "object",
+    "properties": {
+      "authorization": { "type": "string" }
+    },
+    "additionalProperties": false,
+    "required": ["authorization"]
+  }
