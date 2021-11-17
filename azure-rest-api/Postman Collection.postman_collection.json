@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "258d36c4-d6cb-4183-8912-b346c4abbbad",
+		"name": "Azure Rest API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Task",
+			"item": [
+				{
+					"name": "Create Task",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Auth\",\r\n    \"description\": \"Develop auth middleware.\",\r\n    \"status\": \"backlog\",\r\n    \"start_time\": \"2021-05-01T00:00:00Z\",\r\n    \"end_time\": \"2021-05-10T00:00:00Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/api/tasks",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"tasks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Task",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"project_id\": 5,\r\n    \"title\": \"Auth\",\r\n    \"description\": \"Develop auth middleware.\",\r\n    \"status\": \"backlog\",\r\n    \"start_time\": \"2021-05-01T00:00:00Z\",\r\n    \"end_time\": \"2021-05-10T00:00:00Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/api/tasks/1",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"tasks",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Task",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/tasks/2",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"tasks",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Task",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/tasks/1",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"tasks",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Tasks",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"company_id\": 1037,\r\n    \"title\": \"Public API Develpoment\",\r\n    \"description\": \"[EDIT] This project tracks the development of the public API that will be provided to external clients.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/api/tasks?page=1&limit=1",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"tasks"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
